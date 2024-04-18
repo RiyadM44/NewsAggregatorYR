@@ -28,6 +28,6 @@ jobs:
       - name: Trigger Jenkins Pipeline
         run: |
           curl -X POST \
-            -u RY:118b75432f9d86fb1abb4a11a7821d04ed \
+            -u RY:11385618ee635b1f7052e08a8acb107442 \
             -d '' \
             http://3.69.234.114:8080/job/RY/build 
