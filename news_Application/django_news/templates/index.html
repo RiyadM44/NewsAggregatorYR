@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'indexStyles.css' %}">
+    <title>Main Screen</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="{% url 'save_text_input' %}" class="navbar-left">News Aggregator</a>
+        <div class="navbar-middle">
+            <a href="{% url 'save_text_input' %}">Home</a>
+            <a href="{% url 'home' %}">News</a>
+        </div>
+    </div>    
+
+<div class="welcome-container">
+    <header class="header">
+        <h1>Welcome to Our News Website Hello World</h1>
+        <p>Stay informed with the latest news from around the world.</p>
+    </header>
+
+    <div class="video-container">
+        <iframe width="900" height="500" src="https://www.youtube.com/embed/nGIg40xs9e4?si=9BqiS3vmj03OJMSz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+
+    <div class="about-section">
+        <h2>About Us</h2>
+        <p>
+            Our news website strives to deliver accurate and timely information on a wide range of topics, 
+            including politics, technology, entertainment, and more. We are committed to keeping you informed and 
+            engaged with the latest developments from around the globe.
+        </p>
+    </div>
+</div>
+
+<script src="{% static 'indexSite.js' %}"></script>
+
+</body>
+</html>

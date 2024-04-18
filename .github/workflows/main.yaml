@@ -1,0 +1,33 @@
+name: Pull GitHub Repository Contents and Deploy to Jenkins
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  pull_repo_and_deploy:
+    name: Pull GitHub Repository Contents and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Docker Login
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: Build Docker image
+        run: docker build -t riyadm44/djangonewsimage:latest .
+
+      - name: Push Docker image
+        run: docker push riyadm44/djangonewsimage:latest
+
+      - name: Trigger Jenkins Pipeline
+        run: |
+          curl -X POST \
+            -u RY:118b75432f9d86fb1abb4a11a7821d04ed \
+            -d '' \
+            http://3.69.234.114:8080/job/RY/build 

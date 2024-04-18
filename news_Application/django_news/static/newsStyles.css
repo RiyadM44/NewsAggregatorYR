@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    text-align: center;
+}
+.info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 10px 10px;
+}
+.info p {
+    margin: 0;
+    line-height: 1.5;
+}
+form {
+    margin-bottom: 20px;
+}
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.article {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Added for positioning delete icon */
+}
+.delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.article img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    /* Lazy loading */
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+.article img.lazy-loaded {
+    opacity: 1;
+}
+.article h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+}
+.article p {
+    color: #666;
+    line-height: 1.5;
+}
+.article a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.article a:hover {
+    text-decoration: underline;
+}
+.add-news-form {
+    display: none;
+}
+/* Navigation bar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    font-size: 24px;
+    color: #fff; /* Keep the text color the same */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar-middle {
+    text-align: center;
+}
+
+.navbar-middle a {
+    margin: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-middle a:hover {
+    color: #ddd;
+    text-decoration: none; /* Optional: Add underline effect on hover */
+}
