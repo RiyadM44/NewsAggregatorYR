@@ -20,10 +20,10 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t riyadm44/djangonewsimage:latest .
+        run: docker build -t riyadm44/newaggregatorimage:latest .
 
       - name: Push Docker image
-        run: docker push riyadm44/djangonewsimage:latest
+        run: docker push riyadm44/newaggregatorimage:latest
 
       - name: Trigger Jenkins Pipeline
         run: |
