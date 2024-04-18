@@ -10,7 +10,7 @@ pipeline {
                             ssh -o StrictHostKeyChecking=no ubuntu@18.197.87.109 '
                                 docker stop ry || true &&
                                 docker rm ry || true &&
-                                docker rmi riyadm44/dnewaggregatorimage || true &&
+                                docker rmi riyadm44/newaggregatorimage || true &&
                                 docker pull riyadm44/newaggregatorimage:latest &&                                
                                 docker run -d -p 8000:8000 --name ry riyadm44/newaggregatorimage &&
                                 cd NewsAggregatorYR/ &&
